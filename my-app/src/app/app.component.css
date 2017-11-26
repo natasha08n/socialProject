@@ -1,0 +1,23 @@
+.menu{
+  text-align:center;
+  margin-top: 30px;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  transition: color .5s ease-in;
+}
+
+a:hover{
+  color: #1b1e24;
+  transition: color .5s ease-in;
+}
+
+.mainButtons{
+  padding-top: 40px;
+  width: 100%;
+  text-align: center;
+  margin-left: 70%;
+}

@@ -1,0 +1,17 @@
+form{
+    border: 0;
+}
+
+.ui.selection.dropdown{
+    border: 1px solid #ccc;
+    padding-top: 0.6em;
+    padding-left: 0.6em;
+}
+
+input.genderRadio{
+    margin-right: 10px;
+}
+
+.genderSpan{
+    margin-right: 100px;
+}

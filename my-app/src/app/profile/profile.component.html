@@ -1,0 +1,37 @@
+<div *ngIf="user" class="wrapper">
+    <h3>Welcome! You logged in as {{user.username}}</h3>
+    <div class="avatar tblcll">
+      <div class="head"></div>
+      <div class="body">
+        <div class="triangle"></div>
+      </div>
+    </div>
+    <div class="info tblcll">
+      <h6>Main</h6>
+      <span class="title">Name:</span>
+      <span class="value">{{user.username}}</span>
+      <br/>
+      <span class="title">Email:</span>
+      <span class="value">{{user.email}}</span>
+      <br/>
+      <span class="title">Date of Birth:</span>
+      <span class="value">{{user.birthDate}}</span>
+      <br/>
+      <span class="title">Gender:</span>
+      <span class="value">{{user.gender}}</span>
+      <br/>
+      <h6>Additional Info</h6>
+      <span class="title">Country:</span>
+      <span class="value">{{user.country}}</span>
+      <br/>
+      <span class="title">City:</span>
+      <span class="value">{{user.city}}</span>
+      <br/>
+      <span class="title">School:</span>
+      <span class="value">{{user.school}}</span>
+      <br/>
+      <span class="title">University:</span>
+      <span class="value">{{user.university}}</span>
+      <br/>
+     </div>
+  </div>

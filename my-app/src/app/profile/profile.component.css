@@ -1,0 +1,70 @@
+.wrapper {
+    padding: 100px 0 0 0;
+    width: 960px;
+    margin: 10px auto;
+  }
+  
+  h3 {
+    color: #0af;
+    font-weight: normal;
+    font-size: 2em;
+    border-bottom: 2px solid #0af;
+    margin-bottom: 10px;
+  }
+  
+  .tblcll {
+    display: table-cell;
+    padding: 5px;
+    vertical-align: top;
+  }
+  .tblcll span {
+    display: inline-block;
+    font-size: 1em;
+    text-align: left;
+    line-height: 1em;
+  }
+  
+  .avatar {
+    width: 320px;
+    height: 320px;
+    background-color: #eee;
+    color: #999;
+  }
+  .avatar .head {
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 0;
+    border: 80px solid #fff;
+    border-radius: 80px;
+  }
+  .avatar .body {
+    width: 240px;
+    height: 80px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-color: #fff;
+    border-radius: 60px 60px 0 0;
+  }
+  .avatar .body .triangle {
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #eee;
+  }
+  
+  .info {
+    color: #999;
+    padding-left: 15px;
+  }
+  .info .title {
+    width: 100px;
+    color: #0af;
+    text-align: right;
+  }
+  .info h6 {
+    color: #0af;
+    border-bottom: 1px solid;
+    margin: 5px 0 10px 0;
+  }
