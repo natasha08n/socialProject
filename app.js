@@ -3,6 +3,7 @@ var path       = require('path');
 var favicon    = require('serve-favicon');
 var logger     = require('morgan');
 var users      = require('./http/controllers/users');
+var entities   = require('./http/controllers/entities');
 var port       = process.env.PORT || 3000;
 var app        = express();
 var bodyParser = require('body-parser');
@@ -13,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var cors = require('cors');
 app.use(cors());
 app.use('/users', users);
+app.use('/entities', entities);
 app.use(logger('dev'));
 
 app.use(function (req, res, next) {
@@ -49,69 +51,6 @@ app.use( (err, req, res, next) => {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
-});
-
-
-
-var mysql            = require('mysql');
-var dbconfig         = require('./config/database');
-var connection       = mysql.createConnection(dbconfig.connection);
-connection.query('USE ' + dbconfig.database);
-
-app.get('/getcountries', function(req, res) {
-  console.log("function-getcountries");
-  connection.query("SELECT * from countries", function(err, rows){
-      console.log("I know query-countries, I sent request to DB");
-      if(err){
-          return;
-      }
-      if(rows.length){
-          console.log("rows", rows);
-          res.status(200).json(rows);
-      }
-  })
-});
-
-app.get('/getcities', function(req, res) {
-  console.log("function-getcities");
-  connection.query("SELECT * from cities", function(err, rows){
-      console.log("I know query-cities, I sent request to DB");
-      if(err){
-          return;
-      }
-      if(rows.length){
-          console.log("rows", rows);
-          res.status(200).json(rows);
-      }
-  })
-});
-
-app.get('/getuniversities', function(req, res) {
-  console.log("function-getuniversities");
-  connection.query("SELECT * from universities", function(err, rows){
-      console.log("I know query-universities, I sent request to DB");
-      if(err){
-          return;
-      }
-      if(rows.length){
-          console.log("rows", rows);
-          res.status(200).json(rows);
-      }
-  })
-});
-
-app.get('/getschools', function(req, res) {
-  console.log("function-getschools");
-  connection.query("SELECT * from schools", function(err, rows){
-      console.log("I know query-schools, I sent request to DB");
-      if(err){
-          return;
-      }
-      if(rows.length){
-          console.log("rows", rows);
-          res.status(200).json(rows);
-      }
-  })
 });
 
 module.exports = app;
