@@ -16,7 +16,7 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  private serverURL = "http://localhost:3000";
+  private serverURL = "http://localhost:3000/entities";
 
   getCountries(): Observable<Country[]>{
     const url = `${this.serverURL}/getcountries`;
